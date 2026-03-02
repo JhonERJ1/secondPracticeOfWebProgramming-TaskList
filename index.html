@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
   <link rel="stylesheet" href="style.css">
   <title>TaskList - Lista de tareas</title>
 </head>
@@ -16,13 +17,17 @@
       <div>
         <label for="TaskName">Nombre de la tarea</label>
         <input id="TaskName" type="text" placeholder="Ej. Creacion de boton" required>
+        <p id="TaskError" class="error"></p>
       </div>
       <div>
         <label for="TaskDescription">Descripcion</label>
         <input id="TaskDescription" type="text" placeholder="Descripcion de la tarea">
       </div>
-      <input type="submit" value="Agregar">
+      <input type="submit" value="Agregar" class="btnTask">
     </form>
+    <p>Tareas</p>
+    <ul class="TaskList">
+    </ul>
   </main>
   <footer class="footer">
 
