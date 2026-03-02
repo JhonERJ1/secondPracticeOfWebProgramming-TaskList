@@ -33,8 +33,6 @@ function agregarTarea(){
     return
   }
 
-  
-
   //Convertir el nombre en minus
   const nombreMinus = normalizarTexto(nombre)
 
@@ -50,7 +48,7 @@ function agregarTarea(){
   const li = document.createElement('li')
 
   const span = document.createElement('span')
-  span.textContent = nombre
+  span.textContent = normalizarTexto(nombre)
 
   li.append(span)
 
