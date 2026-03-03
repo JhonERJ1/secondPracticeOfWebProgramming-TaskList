@@ -3,36 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <title>TaskList</title>
   <link rel="stylesheet" href="style.css">
-  <title>TaskList - Lista de tareas</title>
 </head>
 <body>
-  <header class="header">
-    <h1>TaskList - Gestionador de tareas</h1>
-    <p>Se acabo el desorden, es hora de ponerle orden a las cosas que si importan</p>
-  </header>
-  <main class="main">
-    <form action="">
-      <div>
-        <label for="TaskName">Nombre de la tarea</label>
-        <input id="TaskName" type="text" placeholder="Ej. Creacion de boton" required>
-        <p id="TaskError" class="error"></p>
-      </div>
-      <div>
-        <label for="TaskDescription">Descripcion</label>
-        <input id="TaskDescription" type="text" placeholder="Descripcion de la tarea">
-      </div>
-      <input type="submit" value="Agregar" class="btnTask">
-    </form>
-    <p>Tareas</p>
-    <ul class="TaskList">
-    </ul>
-  </main>
-  <footer class="footer">
 
-    <p>Todos los derechos reservados 2026 </p>
-  </footer>
-  <script type="module" src="script.js"></script>
+<header class="header">
+  <h1>TaskList</h1>
+  <p>Organiza tus tareas de forma simple y efectiva</p>
+</header>
+
+<main class="main">
+  <div class="filters">
+    <button id="filterAll">Todas</button>
+    <button id="filterPending">Pendientes</button>
+    <button id="filterCompleted">Completadas</button>
+  </div>
+
+  <form id="taskForm">
+    <div>
+      <label for="taskName">Nombre de la tarea</label>
+      <input type="text" id="taskName" placeholder="Ej. Crear botón">
+      <p class="error" id="taskError"></p>
+    </div>
+
+    <div>
+      <label for="taskDescription">Descripción</label>
+      <input type="text" id="taskDescription" placeholder="Opcional">
+    </div>
+
+    <button type="submit" class="btnTask">Agregar tarea</button>
+  </form>
+
+  <ul class="TaskList"></ul>
+
+  <button id="clearAll" class="clear">Limpiar todo</button>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
